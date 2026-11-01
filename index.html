@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پورتال جامع آموزشی زبان انگلیسی پایه نهم | Prospect 3 (۱۴۰۵)</title>
+    <!-- Vazirmatn Font & FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-cyberpunk">
+
+    <!-- Particle Canvas Engine Layer -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- App Wrapper -->
+    <div class="app-wrapper">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box">
+                    <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                    <h2>PROSPECT <span>3</span></h2>
+                </div>
+                <button class="sidebar-toggle-btn" id="sidebar-toggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Gamification Mini Dashboard -->
+            <div class="user-profile-card">
+                <div class="avatar-ring">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+                <div class="user-info">
+                    <span class="user-level" id="user-level-badge">سطح ۱: مبتدی</span>
+                    <div class="xp-bar-container">
+                        <div class="xp-bar-fill" id="xp-bar-fill" style="width: 0%;"></div>
+                    </div>
+                    <span class="xp-text" id="xp-text-display">0 / 100 XP</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active" data-view="view-lessons">
+                        <a href="#"><i class="fa-solid fa-book-open"></i> <span>دروس کتاب (۱ تا ۶)</span></a>
+                    </li>
+                    <li data-view="view-grammar">
+                        <a href="#"><i class="fa-solid fa-code-branch"></i> <span>درس‌نامه‌های گرامر</span></a>
+                    </li>
+                    <li data-view="view-irregular">
+                        <a href="#"><i class="fa-solid fa-list-check"></i> <span>افعال بی‌قاعده</span></a>
+                    </li>
+                    <li data-view="view-syn-ant">
+                        <a href="#"><i class="fa-solid fa-arrow-right-arrow-left"></i> <span>مترادف و متضاد</span></a>
+                    </li>
+                    <li data-view="view-golden-tips">
+                        <a href="#"><i class="fa-solid fa-lightbulb"></i> <span>نکات طلایی امتحانی</span></a>
+                    </li>
+                    <li data-view="view-leitner">
+                        <a href="#"><i class="fa-solid fa-layer-group"></i> <span>جعبه لایتنر ۵ مرحله‌ای</span></a>
+                    </li>
+                    <li data-view="view-voice-coach">
+                        <a href="#"><i class="fa-solid fa-microphone-lines"></i> <span>مربی تلفظ صوتی</span></a>
+                    </li>
+                    <li data-view="view-speed-drill">
+                        <a href="#"><i class="fa-solid fa-bolt"></i> <span>آزمون سرعت (۶۰ ثانیه)</span></a>
+                    </li>
+                    <li data-view="view-mistake-vault">
+                        <a href="#"><i class="fa-solid fa-box-archive"></i> <span>جعبه اشکالات (Mistakes)</span></a>
+                    </li>
+                    <li data-view="view-quizzes">
+                        <a href="#"><i class="fa-solid fa-pen-nib"></i> <span>آزمون‌های تخصصی</span></a>
+                    </li>
+                    <li data-view="view-final-exam">
+                        <a href="#"><i class="fa-solid fa-file-signature"></i> <span>آزمون جامع ۲۸ سوالی</span></a>
+                    </li>
+                    <li data-view="view-achievements">
+                        <a href="#"><i class="fa-solid fa-trophy"></i> <span>مدال‌ها و افتخارات</span></a>
+                    </li>
+                    <li data-view="view-admin">
+                        <a href="#"><i class="fa-solid fa-user-shield"></i> <span>مدیریت دیتابیس</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Theme Switcher Controls -->
+            <div class="theme-switcher">
+                <h4>انتخاب تم ظاهری</h4>
+                <div class="theme-buttons">
+                    <button class="theme-btn active" data-theme="cyberpunk" title="سایبرپانک نئون">
+                        <i class="fa-solid fa-bolt"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="luxury" title="لوکس روشن">
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="eyecare" title="محافظت از چشم">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- Top Header Status Bar -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1 id="page-title">دروس کتاب درسی (Prospect 3)</h1>
+                    <p id="page-subtitle">پوشش ۱۰۰٪ متن، واژگان، تلفظ و ترجمه خط‌به‌خط</p>
+                </div>
+                
+                <!-- Audio Waveform Visualizer -->
+                <div class="audio-equalizer-card" id="audio-equalizer" style="display: none;">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <span class="audio-status-text">در حال پخش تلفظ...</span>
+                </div>
+            </header>
+
+            <!-- Dynamic View Containers -->
+            <div class="content-body">
+
+                <!-- 1. VIEW: LESSONS -->
+                <section class="view-section active" id="view-lessons">
+                    <div class="lesson-selector-tabs" id="lesson-tabs">
+                        <!-- Dynamic Tabs Generated via JS -->
+                    </div>
+                    <div class="lesson-content-display" id="lesson-content-area">
+                        <!-- Dynamic Lesson Details Loaded Here -->
+                    </div>
+                </section>
+
+                <!-- 2. VIEW: GRAMMAR -->
+                <section class="view-section" id="view-grammar">
+                    <div class="grammar-container" id="grammar-content-area">
+                        <!-- Dynamic Grammar Modules Loaded Here -->
+                    </div>
+                </section>
+
+                <!-- 3. VIEW: IRREGULAR VERBS -->
+                <section class="view-section" id="view-irregular">
+                    <div class="table-responsive-card">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search-verbs" placeholder="جستجوی فعل، حالت گذشته یا معنی...">
+                        </div>
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>شکل ساده (Base)</th>
+                                    <th>گذشته ساده (Past)</th>
+                                    <th>قسمت سوم (P.P)</th>
+                                    <th>معنی فارسی</th>
+                                    <th>تلفظ</th>
+                                </tr>
+                            </thead>
+                            <tbody id="irregular-verbs-tbody">
+                                <!-- Dynamic Irregular Verbs Loaded Here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 4. VIEW: SYNONYMS & ANTONYMS -->
+                <section class="view-section" id="view-syn-ant">
+                    <div class="table-responsive-card">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search-syn-ant" placeholder="جستجوی واژه، مترادف یا متضاد...">
+                        </div>
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>واژه اصلی (Word)</th>
+                                    <th>مترادف (Synonym)</th>
+                                    <th>متضاد (Antonym)</th>
+                                    <th>معنی فارسی</th>
+                                </tr>
+                            </thead>
+                            <tbody id="syn-ant-tbody">
+                                <!-- Dynamic Synonyms and Antonyms Loaded Here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 5. VIEW: GOLDEN TIPS -->
+                <section class="view-section" id="view-golden-tips">
+                    <div class="golden-tips-grid" id="golden-tips-container">
+                        <!-- Dynamic Tips Cards Loaded Here -->
+                    </div>
+                </section>
+
+                <!-- 6. VIEW: LEITNER SYSTEM -->
+                <section class="view-section" id="view-leitner">
+                    <div class="leitner-dashboard">
+                        <div class="leitner-boxes-bar" id="leitner-boxes-bar">
+                            <!-- 5 Boxes Counter Badges -->
+                        </div>
+                        
+                        <div class="leitner-card-wrapper">
+                            <div class="leitner-3d-card" id="leitner-card">
+                                <div class="card-face card-front">
+                                    <span class="card-tag" id="leitner-pos-tag">POS</span>
+                                    <h2 id="leitner-word-en">Word</h2>
+                                    <p id="leitner-phonetic">/phonetic/</p>
+                                    <button class="btn-audio-small" id="leitner-audio-btn">
+                                        <i class="fa-solid fa-volume-high"></i>
+                                    </button>
+                                    <span class="flip-hint">کلیک کنید برای چرخش <i class="fa-solid fa-rotate"></i></span>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h2 id="leitner-word-fa">معنی فارسی</h2>
+                                    <p class="example-text" id="leitner-example">جمله نمونه انگلیسی</p>
+                                    <p class="example-trans" id="leitner-example-fa">ترجمه جمله نمونه</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="leitner-controls">
+                            <button class="btn-leitner btn-wrong" id="leitner-btn-wrong">
+                                <i class="fa-solid fa-xmark"></i> بلد نبودم (برگشت به خانه ۱)
+                            </button>
+                            <button class="btn-leitner btn-correct" id="leitner-btn-correct">
+                                <i class="fa-solid fa-check"></i> درست پاسخ دادم (ارتقا به خانه بعدی)
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. VIEW: VOICE COACH -->
+                <section class="view-section" id="view-voice-coach">
+                    <div class="voice-coach-card">
+                        <h3>سنجش هوشمند تلفظ صوتی (Web Speech API)</h3>
+                        <p>واژه مورد نظر را انتخاب کرده، دکمه ضبط را فشار دهید و کلمه را تلفظ کنید:</p>
+
+                        <div class="voice-target-box">
+                            <select id="voice-target-select" class="custom-select">
+                                <!-- Dynamic Select Options -->
+                            </select>
+                            <h2 id="voice-target-text">Personality</h2>
+                            <p id="voice-target-phonetic">/ˌpɜːsəˈnæləti/</p>
+                        </div>
+
+                        <div class="voice-action-zone">
+                            <button class="btn-record" id="btn-start-record">
+                                <i class="fa-solid fa-microphone"></i>
+                                <span>شروع ضبط و تحلیل صدا</span>
+                            </button>
+                            <div class="recording-indicator" id="recording-status" style="display: none;">
+                                <span class="pulse-dot"></span> در حال شنیدن صدای شما...
+                            </div>
+                        </div>
+
+                        <div class="voice-feedback-card" id="voice-feedback" style="display: none;">
+                            <div class="score-circle" id="voice-score-circle">0%</div>
+                            <div class="voice-feedback-text">
+                                <h4 id="voice-result-title">نتیجه تحلیل:</h4>
+                                <p id="voice-recognized-text">متن تشخیص داده شده: -</p>
+                                <p id="voice-msg">ارزیابی دقت تلفظ...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. VIEW: SPEED DRILL (TIME ATTACK) -->
+                <section class="view-section" id="view-speed-drill">
+                    <div class="speed-drill-card">
+                        <div class="speed-header">
+                            <div class="speed-timer" id="speed-timer">۶۰</div>
+                            <div class="speed-score">امتیاز: <span id="speed-score-val">0</span></div>
+                        </div>
+
+                        <div class="speed-body" id="speed-body-game">
+                            <div class="speed-start-screen" id="speed-start-screen">
+                                <i class="fa-solid fa-bolt speed-icon-large"></i>
+                                <h2>چالش سرعت ۶۰ ثانیه‌ای واژگان</h2>
+                                <p>در ۶۰ ثانیه به بیشترین تعداد سوال پاسخ صحیح دهید و امتیاز XP بالایی دریافت کنید!</p>
+                                <button class="btn-primary-glow" id="btn-start-speed-game">شروع چالش سرعت</button>
+                            </div>
+
+                            <div class="speed-play-screen" id="speed-play-screen" style="display: none;">
+                                <h3 id="speed-question-word">Word</h3>
+                                <div class="speed-options-grid" id="speed-options-container">
+                                    <!-- Dynamic 4 Options -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. VIEW: MISTAKE VAULT -->
+                <section class="view-section" id="view-mistake-vault">
+                    <div class="mistake-vault-container">
+                        <div class="vault-header">
+                            <h3><i class="fa-solid fa-vault"></i> جعبه اشکالات هوشمند (Mistake Vault)</h3>
+                            <p>تمام سوالاتی که در آزمون‌ها یا لایتنر اشتباه پاسخ داده‌اید اینجا ثبت می‌شوند تا مرور کنید.</p>
+                            <button class="btn-danger-outline" id="btn-clear-vault">پاکسازی کامل جعبه اشکالات</button>
+                        </div>
+                        <div class="vault-list" id="vault-items-list">
+                            <!-- Dynamic Mistake Cards Loaded Here -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. VIEW: SPECIALIZED QUIZZES -->
+                <section class="view-section" id="view-quizzes">
+                    <div class="quiz-category-tabs">
+                        <button class="quiz-tab-btn active" data-quiz-type="grammar">آزمون‌های گرامر</button>
+                        <button class="quiz-tab-btn" data-quiz-type="vocab">آزمون‌های واژگان</button>
+                        <button class="quiz-tab-btn" data-quiz-type="irregular">آزمون افعال بی‌قاعده</button>
+                    </div>
+                    <div class="quiz-play-area" id="specialized-quiz-area">
+                        <!-- Dynamic Quiz Content -->
+                    </div>
+                </section>
+
+                <!-- 11. VIEW: FINAL EXAM (28 QUESTIONS) -->
+                <section class="view-section" id="view-final-exam">
+                    <div class="final-exam-card">
+                        <div class="exam-header-banner">
+                            <h2>آزمون جامع ۲۸ سوالی استاندارد (Prospect 3)</h2>
+                            <p>طراحی شده بر اساس دقیق‌ترین استانداردهای بارم‌بندی امتحانات نهایی کشوری</p>
+                        </div>
+                        <div id="final-exam-questions-container">
+                            <!-- 28 Dynamic Questions Rendered Here -->
+                        </div>
+                        <div class="exam-submit-bar">
+                            <button class="btn-success-glow" id="btn-submit-final-exam">ارسال و تصحیح هوشمند آزمون جامع</button>
+                        </div>
+                        <div class="exam-results-display" id="final-exam-result-box" style="display: none;">
+                            <!-- Full Analysis & Explanatory Answers -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 12. VIEW: ACHIEVEMENTS & BADGES -->
+                <section class="view-section" id="view-achievements">
+                    <div class="achievements-grid" id="achievements-container">
+                        <!-- Dynamic Badges Loaded Here -->
+                    </div>
+                </section>
+
+                <!-- 13. VIEW: ADMIN DASHBOARD -->
+                <section class="view-section" id="view-admin">
+                    <div class="admin-grid">
+                        <div class="admin-card">
+                            <h3><i class="fa-solid fa-plus-circle"></i> افزودن واژه جدید به دیتابیس</h3>
+                            <form id="admin-add-vocab-form">
+                                <div class="form-group">
+                                    <label>درس مرتبط:</label>
+                                    <select id="admin-lesson-id" class="custom-input">
+                                        <option value="1">درس ۱: Personality</option>
+                                        <option value="2">درس ۲: Travel</option>
+                                        <option value="3">درس ۳: Festivals and Ceremonies</option>
+                                        <option value="4">درس ۴: Services</option>
+                                        <option value="5">درس ۵: Media</option>
+                                        <option value="6">درس ۶: Health and Injuries</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>واژه انگلیسی:</label>
+                                    <input type="text" id="admin-word-en" class="custom-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>تلفظ فونتیک:</label>
+                                    <input type="text" id="admin-phonetic" class="custom-input" placeholder="/.../" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>نقش دستوری (POS):</label>
+                                    <input type="text" id="admin-pos" class="custom-input" placeholder="adj, v, n..." required>
+                                </div>
+                                <div class="form-group">
+                                    <label>معنی فارسی:</label>
+                                    <input type="text" id="admin-word-fa" class="custom-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>جمله نمونه انگلیسی:</label>
+                                    <input type="text" id="admin-example" class="custom-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>ترجمه جمله نمونه:</label>
+                                    <input type="text" id="admin-example-fa" class="custom-input" required>
+                                </div>
+                                <button type="submit" class="btn-primary-glow">افزودن کلمه به دیتابیس</button>
+                            </form>
+                        </div>
+
+                        <div class="admin-card">
+                            <h3><i class="fa-solid fa-database"></i> پشتیبان‌گیری و بازیابی اطلاعات</h3>
+                            <p>می‌توانید تمام پیشرفت، کلمات افزوده شده و داده‌های سیستم را صادر یا وارد کنید:</p>
+                            <div class="admin-actions">
+                                <button class="btn-secondary" id="btn-export-database">
+                                    <i class="fa-solid fa-download"></i> دانلود فایل پشتیبان (JSON Export)
+                                </button>
+                                <label class="btn-secondary file-upload-label">
+                                    <i class="fa-solid fa-upload"></i> بازیابی داده‌ها (Import JSON)
+                                    <input type="file" id="import-database-file" accept=".json" style="display: none;">
+                                </label>
+                                <button class="btn-danger-outline" id="btn-reset-all-data">
+                                    <i class="fa-solid fa-trash-can"></i> بازنشانی کامل سیستم به تنظیمات کارخانه
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Canvas Confetti Container -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- JS Modular Scripts -->
+    <script src="data.json" type="application/json" id="raw-data-json"></script>
+    <script src="leitner.js"></script>
+    <script src="speedgame.js"></script>
+    <script src="voicecoach.js"></script>
+    <script src="admin-dashboard.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
