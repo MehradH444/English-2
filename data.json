@@ -1,0 +1,117 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Lesson 1: Personality",
+      "reading_en": "My name is Reza. I have a big family. My father is very hard-working and helpful. My mother is neat and patient. My brother Parsa is clever, but sometimes he is a bit selfish. We are a happy family.",
+      "reading_fa": "نام من رضا است. من خانواده بزرگی دارم. پدر من بسیار سخت‌کوش و خدوم (کمک‌کننده) است. مادر من منظم و باحوصله است. برادر من پارسا باهوش است، اما گاهی اوقات کمی خودخواه است. ما خانواده خوشبختی هستیم.",
+      "vocab": [
+        {"word": "clever", "phonetic": "/ˈklev.ər/", "pos": "adj", "meaning": "باهوش، زرنگ", "example": "He is a clever student.", "example_fa": "او دانش‌آموز باهوش است."},
+        {"word": "hard-working", "phonetic": "/ˌhɑːdˈwɜː.kɪŋ/", "pos": "adj", "meaning": "سخت‌کوش، پرکار", "example": "Nurses are hard-working.", "example_fa": "پرستاران سخت‌کوش هستند."},
+        {"word": "helpful", "phonetic": "/ˈhelp.fəl/", "pos": "adj", "meaning": "خدوم، یاری‌رسان", "example": "She is very helpful at home.", "example_fa": "او در خانه بسیار یاری‌رسان است."},
+        {"word": "patient", "phonetic": "/ˈpeɪ.ʃənt/", "pos": "adj", "meaning": "صبور، باحوصله", "example": "Teachers are patient.", "example_fa": "معلمان صبور هستند."},
+        {"word": "quiet", "phonetic": "/ˈkwaɪ.ət/", "pos": "adj", "meaning": "آرام، ساکت", "example": "Ali is a quiet boy.", "example_fa": "علی پسری ساکت است."},
+        {"word": "brave", "phonetic": "/breɪv/", "pos": "adj", "meaning": "شجاع، نترس", "example": "The firefighter is brave.", "example_fa": "آتش‌نشان شجاع است."}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lesson 2: Travel",
+      "reading_en": "Every summer, many people travel around Iran. They buy tickets, check in at the airport, or take a train. Last year, my family and I traveled to Shiraz. We stayed in a nice hotel and visited Eram Garden.",
+      "reading_fa": "هر تابستان، افراد زیادی به سراسر ایران سفر می‌کنند. آن‌ها بلیط می‌خرند، در فرودگاه پذیرش می‌شوند یا قطار می‌گیرند. سال گذشته، من و خانواده‌ام به شیراز سفر کردیم. ما در یک هتل خوب اقامت کردیم و از باغ ارم دیدن نمودیم.",
+      "vocab": [
+        {"word": "ticket", "phonetic": "/ˈtɪk.ɪt/", "pos": "n", "meaning": "بلیط", "example": "I bought a train ticket.", "example_fa": "من یک بلیط قطار خریدم."},
+        {"word": "hotel", "phonetic": "/həʊˈtel/", "pos": "n", "meaning": "هتل، مهمان‌پذیر", "example": "We booked a hotel room.", "example_fa": "ما یک اتاق هتل رزرو کردیم."},
+        {"word": "airport", "phonetic": "/ˈeə.pɔːt/", "pos": "n", "meaning": "فرودگاه", "example": "They arrived at the airport.", "example_fa": "آن‌ها به فرودگاه رسیدند."},
+        {"word": "passport", "phonetic": "/ˈpɑːs.pɔːt/", "pos": "n", "meaning": "گذرنامه، پاسپورت", "example": "Show your passport, please.", "example_fa": "لطفاً پاسپورت خود را نشان دهید."}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Lesson 3: Festivals and Ceremonies",
+      "reading_en": "Iranians celebrate Nowruz on the first day of spring. We clear the house, make special foods, wear new clothes, and visit our relatives. We also hold a national ceremony on Islamic holidays.",
+      "reading_fa": "ایرانیان نوروز را در نخستین روز بهار جشن می‌گیرند. ما خانه را گردگیری می‌کنیم، غذاهای ویژه درست می‌کنیم، لباس‌های نو می‌پوشیم و به دیدن خویشاوندان می‌رویم. ما همچنین در اعیاد اسلامی مراسم ملی برگزار می‌کنیم.",
+      "vocab": [
+        {"word": "celebrate", "phonetic": "/ˈsel.ə.breɪt/", "pos": "v", "meaning": "جشن گرفتن", "example": "We celebrate Nowruz.", "example_fa": "ما نوروز را جشن می‌گیریم."},
+        {"word": "fireworks", "phonetic": "/ˈfaɪə.wɜːks/", "pos": "n", "meaning": "آتش‌بازی", "example": "We watch fireworks at night.", "example_fa": "ما شب‌ها آتش‌بازی تماشا می‌کنیم."},
+        {"word": "relative", "phonetic": "/ˈrel.ə.tɪv/", "pos": "n", "meaning": "خویشاوند، فامیل", "example": "I visited my relatives.", "example_fa": "من از خویشاوندانم دیدن کردم."}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Lesson 4: Services",
+      "reading_en": "Emergency services help people in danger. The police, firefighters, and medical staff work hard every day. You can call 115 for an ambulance or 125 for the fire department.",
+      "reading_fa": "خدمات اضطراری به مردم در هنگام خطر کمک می‌کنند. پلیس، آتش‌نشانان و کادر درمان هر روز سخت کار می‌کنند. شما می‌توانید برای آمبولانس با ۱۱۵ و برای آتش‌نشانی با ۱۲۵ تماس بگیرید.",
+      "vocab": [
+        {"word": "ambulance", "phonetic": "/ˈæm.bjə.ləns/", "pos": "n", "meaning": "آمبولانس", "example": "Call an ambulance immediately.", "example_fa": "فوراً به آمبولانس زنگ بزنید."},
+        {"word": "firefighter", "phonetic": "/ˈfaɪəˌfaɪ.tər/", "pos": "n", "meaning": "آتش‌نشان", "example": "Firefighters put out fires.", "example_fa": "آتش‌نشانان آتش را خاموش می‌کنند."}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Lesson 5: Media",
+      "reading_en": "Today, media plays an important role in our lives. People watch news on TV, listen to the radio, read newspapers, or search the Internet to get updated information.",
+      "reading_fa": "امروزه، رسانه نقش مهمی در زندگی ما ایفا می‌کند. مردم اخبار را در تلویزیون تماشا می‌کنند، به رادیو گوش می‌دهند، روزنامه می‌خوانند یا در اینترنت جستجو می‌کنند تا اطلاعات به‌روز دریافت کنند.",
+      "vocab": [
+        {"word": "newspaper", "phonetic": "/ˈnjuːzˌpeɪ.pər/", "pos": "n", "meaning": "روزنامه", "example": "He reads the newspaper every morning.", "example_fa": "او هر روز صبح روزنامه می‌خواند."},
+        {"word": "internet", "phonetic": "/ˈɪn.tə.net/", "pos": "n", "meaning": "اینترنت", "example": "I search the internet for news.", "example_fa": "من برای اخبار در اینترنت جستجو می‌کنم."}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Lesson 6: Health and Injuries",
+      "reading_en": "When people get sick or injured, they go to a doctor or hospital. Common health problems include headache, sore throat, backache, and toothache. Drinking warm fluids helps a cold.",
+      "reading_fa": "وقتی مردم بیمار یا مصدوم می‌شوند، به پزشک یا بیمارستان مراجعه می‌کنند. مشکلات رایج سلامتی شامل سردرد، گلو درد، کمردرد و دندان‌درد است. نوشیدن مایعات گرم به بهبود سرماخوردگی کمک می‌کند.",
+      "vocab": [
+        {"word": "headache", "phonetic": "/ˈhed.eɪk/", "pos": "n", "meaning": "سردرد", "example": "I have a terrible headache.", "example_fa": "من سردرد شدیدی دارم."},
+        {"word": "patient", "phonetic": "/ˈpeɪ.ʃənt/", "pos": "n", "meaning": "بیمار", "example": "The doctor visited the patient.", "example_fa": "پزشک بیمار را معاینه کرد."}
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "lesson_id": 1,
+      "title": "افعال to be و صفات شخصیتی",
+      "rule": "برای توصیف شخصیت افراد از فرمول: Subject + am/is/are + Adjective استفاده می‌شود.",
+      "examples": ["He is very clever.", "They are helpful."]
+    },
+    {
+      "lesson_id": 2,
+      "title": "زمان گذشته ساده (Past Simple)",
+      "rule": "برای اشاره به کارهای تمام شده در گذشته. افعال با قاعده ed می‌گیرند و افعال بی‌قاعده تغییر شکل می‌دهند.",
+      "examples": ["I traveled to Shiraz.", "We bought tickets."]
+    }
+  ],
+  "irregular_verbs": [
+    {"base": "buy", "past": "bought", "pp": "bought", "meaning": "خریدن"},
+    {"base": "go", "past": "went", "pp": "gone", "meaning": "رفتن"},
+    {"base": "see", "past": "saw", "pp": "seen", "meaning": "دیدن"},
+    {"base": "take", "past": "took", "pp": "taken", "meaning": "گرفتن / بردن"},
+    {"base": "make", "past": "made", "pp": "made", "meaning": "ساختن / درست کردن"}
+  ],
+  "synonyms_antonyms": [
+    {"word": "clever", "synonym": "smart", "antonym": "stupid", "meaning": "باهوش / کودن"},
+    {"word": "brave", "synonym": "fearless", "antonym": "coward", "meaning": "شجاع / ترسو"},
+    {"word": "quiet", "synonym": "silent", "antonym": "noisy", "meaning": "ساکت / پرسرصدا"}
+  ],
+  "golden_tips": [
+    {"title": "تفاوت 's مالکیت و of", "content": "برای جانداران از 's استفاده کنید (Ali's book) و برای بی‌جان‌ها از of استفاده کنید (the door of the room)."},
+    {"title": "قیدهای تکرار در گذشته", "content": "قیدهای تکرار همیشه قبل از فعل اصلی و بعد از افعال to be می‌آیند."}
+  ],
+  "final_exam_questions": [
+    {
+      "id": 1,
+      "question": "Which sentence describes a personality correctly?",
+      "options": ["A) He has a blue car.", "B) She is very patient and polite.", "C) They are going to school.", "D) We bought a ticket."],
+      "answer": 1,
+      "explanation": "گزینه B صفت‌های شخصیتی patient و polite را توصیف می‌کند."
+    },
+    {
+      "id": 2,
+      "question": "What is the past form of the verb 'go'?",
+      "options": ["A) goed", "B) gone", "C) went", "D) going"],
+      "answer": 2,
+      "explanation": "گذشته فعل بی‌قاعده go برابر با went است."
+    }
+  ]
+}
